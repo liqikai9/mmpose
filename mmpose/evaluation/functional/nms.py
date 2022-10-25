@@ -111,7 +111,7 @@ def oks_nms(kpts_db: List[dict],
             thr: float,
             sigmas: Optional[np.ndarray] = None,
             vis_thr: Optional[float] = None,
-            score_per_joint: bool = False):
+            score_per_joint: bool = False) -> np.ndarray:
     """OKS NMS implementations.
 
     Args:
@@ -163,7 +163,7 @@ def oks_nms(kpts_db: List[dict],
 def _rescore(overlap: np.ndarray,
              scores: np.ndarray,
              thr: float,
-             type: str = 'gaussian'):
+             type: str = 'gaussian') -> np.ndarray:
     """Rescoring mechanism gaussian or linear.
 
     Args:
@@ -193,7 +193,7 @@ def soft_oks_nms(kpts_db: List[dict],
                  max_dets: int = 20,
                  sigmas: Optional[np.ndarray] = None,
                  vis_thr: Optional[float] = None,
-                 score_per_joint: bool = False):
+                 score_per_joint: bool = False) -> np.ndarray:
     """Soft OKS NMS implementations.
 
     Args:
